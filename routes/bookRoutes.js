@@ -7,6 +7,7 @@ const {
   getSpecificBook,
   addNewBook,
   updateBook,
+  getAllIssuedBooks,
 } = require("../controllers/bookController");
 const router = express.Router();
 
@@ -17,6 +18,7 @@ router.get("/", getAllBooks);
 router.get("/:id", getSpecificBook);
 
 // to get the issued books.
+router.get("/issued", getAllIssuedBooks);
 
 // to add a new back.
 router.post("/", addNewBook);
